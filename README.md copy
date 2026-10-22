@@ -1,0 +1,3 @@
+# Utbetaling-slackbot
+
+Enkel slack app som sender ut forskjellige meldinger til Utbetaling sine kanaler. Basert på https://github.com/navikt/aap-teamslackbot

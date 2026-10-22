@@ -1,0 +1,44 @@
+---
+apiVersion: nais.io/v1alpha1
+kind: Application
+metadata:
+  name: utbetaling-slackbot
+  namespace: uaf
+  labels:
+    team: uaf
+    systemkatalog.nav.no/system: SK-268
+spec:
+  image: { { image } }
+  port: 8080
+  replicas:
+    min: 1
+    max: 1
+  liveness:
+    path: /internal/is_alive
+  readiness:
+    path: /internal/is_alive
+  resources:
+    limits:
+      memory: 512Mi
+    requests:
+      cpu: 10m
+      memory: 128Mi
+  ingresses:
+    - https://utbetaling-slackbot.ekstern.dev.nav.no
+  observability:
+    logging:
+      destinations:
+        - id: elastic
+        - id: loki
+  accessPolicy:
+    outbound:
+      external:
+        - host: slack.com
+        - host: api.slack.com
+        - host: wss-primary.slack.com
+        - host: "cdn.nav.no"
+  env:
+    - name: PORT
+      value: "8080"
+  envFrom:
+    - secret: utbetaling-slackbot-secrets
