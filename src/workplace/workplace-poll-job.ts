@@ -10,7 +10,8 @@ const TIMEZONE = 'Europe/Oslo'
 
 
 const channelsAndBlocks = [
-    { channel: 'C0C8NF3EY0K', blocks: blocksFaggruppeArkitektur }, // #line-tester-bot
+   // { channel: 'C0C8NF3EY0K', blocks: blocksFaggruppeArkitektur }, // #line-tester-bot
+    { channel: 'C0BA9D2NGUC', blocks: blocksFaggruppeArkitektur }, // #utbetaling-arkitekturfunksjon
 ]
 
 const now = () => {
@@ -62,7 +63,7 @@ export function setupWorkplaceJob(app: App) {
     };
 
     //const time = '0 */3 * * * 1-5' // Test cron
-    const time = '20 14 * * 1-5' // kl 14:15, man-fre, alle uker, alle måneder
+    const time = '00 14 * * 1-5' // kl 14:15, man-fre, alle uker, alle måneder
 
     console.log(`Init cronjob with crontime: ${time}`)
 

@@ -32,7 +32,7 @@ const app = new App({
     await app.start(PORT);
 
     setupWorkplaceJob(app);
-    setupShowAndTellJob(app);
+    //setupShowAndTellJob(app);
 
     console.log(`⚡️ Bolt app is running on port ${PORT}!`);
 })();

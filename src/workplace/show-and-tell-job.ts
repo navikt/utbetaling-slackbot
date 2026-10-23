@@ -23,12 +23,6 @@ export function setupShowAndTellJob(app: App) {
             return
         }
 
-        const isByWeekly = isByWeeklyDate(startDateBiWeekly, new Date());
-        if(!isByWeekly) {
-            console.log(`Hopper over denne fredagen, bare annen hver`)
-            return;
-        }
-
         const dayNumber = new Date().getDay();
         const datoString = `${ukedagNavn(dayNumber)} ${idagDateString()}?`
 
@@ -50,7 +44,7 @@ export function setupShowAndTellJob(app: App) {
     };
 
     // const time = '01 09 * * 5' // kl 11:11:11, man-fre, alle uker, alle måneder
-    const time = '59 08 * * 5' // kl 11:11:11, man-fre, alle uker, alle måneder
+    const time = '59 08 * * 5' // kl 08:59, man-fre, alle uker, alle måneder
 
     console.log(`Init cronjob showandtell with crontime: ${time}`)
 
