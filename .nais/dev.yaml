@@ -8,7 +8,7 @@ metadata:
     team: uaf
     systemkatalog.nav.no/system: SK-268
 spec:
-  image: { { image } }
+  image: {{ image }}
   port: 8080
   replicas:
     min: 1

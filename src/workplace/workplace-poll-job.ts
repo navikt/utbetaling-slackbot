@@ -62,7 +62,7 @@ export function setupWorkplaceJob(app: App) {
     };
 
     //const time = '0 */3 * * * 1-5' // Test cron
-    const time = '15 14 * * 1-5' // kl 14:15, man-fre, alle uker, alle måneder
+    const time = '20 14 * * 1-5' // kl 14:15, man-fre, alle uker, alle måneder
 
     console.log(`Init cronjob with crontime: ${time}`)
 
