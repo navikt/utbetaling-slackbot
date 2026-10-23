@@ -41,4 +41,4 @@ spec:
     - name: PORT
       value: "8080"
   envFrom:
-    - secret: utbetaling-slackbot-secrets
+    - secret: slack-bot
