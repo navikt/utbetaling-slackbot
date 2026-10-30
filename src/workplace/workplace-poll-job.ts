@@ -11,7 +11,7 @@ const TIMEZONE = 'Europe/Oslo'
 
 const channelsAndBlocks = [
    // { channel: 'C0C8NF3EY0K', blocks: blocksFaggruppeArkitektur }, // #line-tester-bot
-    { channel: 'C0BA9D2NGUC', blocks: blocksFaggruppeArkitektur }, // #utbetaling-arkitekturfunksjon
+    { channel: 'C0C1T57JX7H', blocks: blocksFaggruppeArkitektur }, // #utbetaling-arkitekturfunksjon-værsågod
 ]
 
 const now = () => {
